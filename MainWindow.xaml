@@ -1,0 +1,86 @@
+﻿<Window x:Class="WpfDZ1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDZ1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="35*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="35*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="35*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="35*"/>
+                <ColumnDefinition Width="100*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="ID:" />
+            <TextBox x:Name="ID" Grid.Column="1" IsEnabled="False"/>
+            <Label Content="Имя" Grid.Column="2" />
+            <TextBox x:Name="Name" Grid.Column="3" IsEnabled="False" />
+            <Label Content="Фамилия" Grid.Column="4" />
+            <Label Content="Отчество" Grid.Column="6" />
+            <TextBox x:Name="Lastname" Grid.Column="5" IsEnabled="False"/>
+            <TextBox x:Name="Firstname" Grid.Column="7"  IsEnabled="False"/>
+            <TextBox x:Name="Counter" Grid.Column="3" Grid.Row="1" IsEnabled="False"/>
+            <TextBox x:Name="Sity" Grid.Column="5" Grid.Row="1" IsEnabled="False"/>
+            <TextBox x:Name="Street" Grid.Column="7" Grid.Row="1" IsEnabled="False"/>
+            <Label Content="Страна" Grid.Column="2" Grid.Row="1" />
+            <Label Content="Город" Grid.Column="4" Grid.Row="1"/>
+            <Label Content="Улица" Grid.Column="6" Grid.Row="1"/>
+            <TextBlock Text="Номер дома и кв." Grid.Column="2" Grid.Row="2" TextWrapping="Wrap"/>
+            <TextBlock Text="Домашний телефон" Grid.Column="4" Grid.Row="2" TextWrapping="Wrap" />
+            <TextBlock Text="Рабочий телефон" Grid.Column="6" Grid.Row="2" TextWrapping="Wrap"/>
+            <TextBox x:Name="Number" Grid.Column="3" Grid.Row="2" IsEnabled="False"/>
+            <TextBox x:Name="HomeTelephone" Grid.Column="5" Grid.Row="2" IsEnabled="False" />
+            <TextBox x:Name="RabTelephone" Grid.Column="7" Grid.Row="2" IsEnabled="False" />
+            <Grid Grid.Row="3" Grid.ColumnSpan="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="Button_Cancels" Content="Отменить или удалить" Grid.Column="5" Click="Button_Cancel" IsEnabled="False"/>
+                <Button x:Name="Button_Saves" Content="Сохранить" Click="Button_Save" IsEnabled="False"/>
+                <Button x:Name="Button_Edits" Content="Редактировать" Grid.Column="1" Click="Button_Edit" IsEnabled="False"/>
+                <Button x:Name="Button_News" Content="Новый" Grid.Column="2" Click="Button_New"/>
+                <Button Content="Загрузить из файла" Grid.Column="3" Click="Button_ImportFile"/>
+                <Button Content="Выгрузить в файл" Grid.Column="4" Click="Button_ExportFile"/>
+            </Grid>
+
+        </Grid>
+        <DataGrid x:Name="GridClients" AutoGenerateColumns="True" MouseUp="GridClients_MouseUp">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Path=id}" Width="30" />
+                <DataGridTextColumn Header="Имя" Binding="{Binding Path=name}" Width="100" />
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Path=lastName}" Width="100" />
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Path=firstName}" Width="100" />
+                <DataGridTextColumn Header="Страна" Binding="{Binding Path=county}" Width="60" />
+                <DataGridTextColumn Header="Город" Binding="{Binding Path=city}" Width="60" />
+                <DataGridTextColumn Header="улица" Binding="{Binding Path=street}" Width="60" />
+                <DataGridTextColumn Header="дом" Binding="{Binding Path=nomer}" Width="40" />
+                <DataGridTextColumn Header="Домашний телефон" Binding="{Binding Path=homeTelephone}" Width="120" />
+                <DataGridTextColumn Header="Рабочий телефон" Binding="{Binding Path=rabTelephone}" Width="120" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "/kjFE8VAjBR1WsTDjy7Q7VIH8PcM/+PmSfbNshiu5B3jHMZnoNovgvGZ9br2Y7qzRQFetRRUionSwvvTXxj/YA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\LetRuin\\source\\repos\\WpfDZ1\\WpfDZ1\\WpfDZ1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LetRuin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\LetRuin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}
